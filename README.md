@@ -1,0 +1,1 @@
+# IntareSport.com-simplified-Strapi
