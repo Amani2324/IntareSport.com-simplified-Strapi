@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Posts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "postTitle": {
+      "type": "string"
+    },
+    "coverImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "postAuthor": {
+      "type": "string"
+    },
+    "postTime": {
+      "type": "string"
+    },
+    "postCategory": {
+      "type": "string"
+    },
+    "postContent": {
+      "type": "blocks"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "posts"
+    }
+  }
+}
