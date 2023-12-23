@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Posts"
+    "displayName": "Posts",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,15 @@
       "type": "string"
     },
     "coverImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "postAuthor": {
       "type": "string"
@@ -33,14 +35,14 @@
     "postCategory": {
       "type": "string"
     },
-    "postContent": {
-      "type": "blocks"
-    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "posts"
+    },
+    "postContent": {
+      "type": "richtext"
     }
   }
 }
